@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Header from './components/Header';
+import List from './components/List';
+import Form from './components/Form';
+import React, {useState} from 'react';
 
 function App() {
+  const [inputText, setInputText] = useState("");
+  const [toDoList, setToDoList] = useState([]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main >
+      <Container>
+        <Row>
+          <Header />
+        </Row>
+        <Row>
+          <Form inputText={inputText} setInputText = {setInputText} toDoList={toDoList} setToDoList={setToDoList}/>
+        </Row>
+        <Row>
+          <List setToDoList={setToDoList} toDoList={toDoList} />
+        </Row> 
+      </Container>
+    </main>
   );
 }
 

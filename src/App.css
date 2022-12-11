@@ -1,38 +1,109 @@
-.App {
+:root{
+  /* colors */
+  --white: #fff;
+  --background: #F5F5F5;
+  --blue-dark: #001747;
+  --blue: #11175E;
+  --blue-light: #2D70FD;
+  --gray-100: #EEEEEE;
+  --gray-200: #B1BACB;
+  --gray-300: #8F98A8;
+
+  /* box shadows */
+  --shadow-1: 0px 0px 4px var(--blue-dark);
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+ul, li{
+  list-style-type: none;
+}
+
+main{
+  margin: auto;
+  background-color: var(--white);
+  width: 66vw;
+  height: 90vh;
+  border-radius: 32px;
+  box-shadow: var(--shadow-1);
+  padding: auto;
+}
+
+input, ul, li, button{
+  /*fonts*/
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+}
+
+button{
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+body{
+  background-color: var(--background);
+  display: inline;
+}
+
+/*Header*/
+h1{
+  font-family: 'Rubik', sans-serif;
+  font-size: 48px;
+  line-height: 57px;
+  color: var(--blue);
+}
+
+.app-header{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Add Bar*/
+.form-field{
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-field{
+  box-sizing: border-box;
+  width: 33vw;
+  height: 7vh;
+  left: 456px;
+  top: 317px;
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.add-button{
+  text-align: center;
+  background: var(--blue-light);
+  border: 1px solid var(--blue-light);
+  border-radius: 4px;
+  color: var(--white);
+  padding: 12px 24px;
+  gap: 8px;
+  height: 6vh;
+  width: 5vw;
+  margin-left: -7.6%;
+}
+
+/*To Do List*/
+.list-field{
+  margin-top: 5%;
+  text-align: center;
+}
+
+/*footer*/
+footer{
+  border-top: 1px solid var(--gray-100);
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 450px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
